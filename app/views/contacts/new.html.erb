@@ -1,0 +1,23 @@
+<h1>Contacts#new</h1>
+
+<%= form_for @contact do |f| %>
+	<%= f.label	:Phone %> <br />
+	<%= f.text_field :phone %><br />
+	
+	<%= f.label :Phone_Type %><br /><br />
+	<%= f.text_field :phone_type %><br />
+	
+	<%= f.label :Website %><br /><br />
+	<%= f.text_field :website %><br />
+	
+	<%= f.label :Email %><br /><br />
+	<%= f.text_field :email %><br />
+	
+	<%= f.label :Contact_name %><br /><br />
+	<%= f.text_field :contact_name %><br />
+	
+	<%= f.label :Company_Id %><br /><br />
+	<%= f.text_field :company_id %><br />
+	
+	<%= f.submit 'Create Contact' %>
+<% end %>

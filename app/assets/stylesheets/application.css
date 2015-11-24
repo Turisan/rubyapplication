@@ -1,0 +1,247 @@
+.anchor {
+	position:absolute;
+	height: 50px;
+	width: 50px;
+	left: 3%; 
+	top: 12%;
+	}
+
+
+body {
+background: #F2F2F2;
+margin: 0;
+padding: 0;
+}
+
+#menu {
+position: relative;
+width: 40%
+padding-left: 10%;
+background: silver;
+padding-bottom: 5px;
+height: 100%;
+display: inline;
+}
+
+#search {
+position: absolute;
+width: 90%;
+padding-left: 10%;
+background: silver;
+padding-top: 18px;
+padding-bottom: 15px;
+height: 4%;	
+display: inline;
+}
+
+#list1 {
+/* add resource */
+position: absolute;
+text-align: left;
+width: 15%;
+background: #F2F2F2;
+height: 150px;	
+
+padding-left: 3%;
+font-size: 20px;
+line-height: .8%;
+
+/*padding-top: 2px;*/
+top: 20%;
+}
+
+#button1:hover {
+
+	cursor: pointer;
+}
+
+#button2:hover {
+
+	cursor: pointer;
+}
+
+#button3:hover {
+
+	cursor: pointer;
+}
+
+#button4:hover {
+
+	cursor: pointer;
+}
+#button5:hover {
+
+	cursor: pointer;
+}
+
+#button6:hover {
+
+	cursor: pointer;
+}
+
+#button7:hover {
+
+	cursor: pointer;
+}
+
+.accordion {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/search_types.png";
+height: 10px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 20px;
+top: 11.5%;
+
+border: 0;
+background: transparent;
+}
+
+#button2 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/add_location.png";
+opacity: 30%;
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 37%;
+
+border: 0; 
+background: transparent;
+}
+
+#button3 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/edit_location.png";
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 47%;
+
+border: 0; 
+background: transparent;
+
+}
+
+#button4 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/delete_listing.png";
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 57%;
+
+border: 0; 
+background: transparent;
+
+}
+
+#button5 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/create_listing.png";
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 56%;
+}
+
+#button6 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/add_comment.png";
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 69%;
+}
+
+#button7 {
+/* add resource */
+position: absolute;
+width: 20%;
+background-image: src="images/my_listings.png";
+height: 50px;	
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+font-size: 26px;
+top: 82%;
+}
+
+#map{
+position: absolute;
+top: 75px;
+left: 20%;
+height: 80%;		
+padding:1px;
+border-style: inset;
+border-width: 5px;
+border-color: silver;
+width: 60%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+#sidebar {
+position: absolute;
+top: 75px;
+left: 82%;
+width: 15%;
+height: 80%;
+padding: 1px;
+border-style: inset;
+border-width: 5px;
+border-color: silver;
+float: right;
+overflow: hidden;
+}
+
+	#title {
+	height: 7%;
+	width: 100%;
+	background-color: silver;
+	font-size: 20px;
+	text-align: center;
+	}
+
+	#content {
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	}
+
+#footer {
+position: absolute;
+width: 90%;
+padding-left: 10%;
+background: silver;
+bottom: 0;
+height: 4%;
+margin-top: 40px;
+text-align: center;
+}

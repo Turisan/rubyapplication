@@ -1,0 +1,13 @@
+<h1>Users#index</h1>
+
+<%= link_to 'Add User', new_user_path %>
+
+<% @users.each do |d| %>
+<p> 
+	User_name: <%=  d.user_name %><br />
+	User_password: <%=  d.user_password %><br />
+	UserType_Id: <%=  d.userType_id %> | 
+		<%= link_to 'Edit', edit_user_path(d) %> | 
+		<%= link_to 'delete', user_path(d.id), method: :delete %>
+		
+<% end %>

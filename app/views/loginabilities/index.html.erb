@@ -1,0 +1,14 @@
+<h1>Loginabilities#index</h1>
+<%= link_to 'Add Login_abilities', new_loginability_path %>
+
+<% @logins.each do |d| %>
+<p> 
+	Login : <%=  d.login %><br />
+	Password : <%=  d.password %><br />
+	Read : <%=  d.readaccess %><br />
+	Create : <%=  d.createaccess %><br />
+	Edit: <%=  d.editaccess %><br />
+	Delete : <%=  d.deleteaccess %> | 
+		<%= link_to 'Edit', edit_loginability_path(d) %> | 
+		<%= link_to 'delete', d, method: :delete %>		
+<% end %>

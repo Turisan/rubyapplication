@@ -1,0 +1,9 @@
+<%= form_for @companyaddress do |f| %><br />
+	<%= f.label	:Company_Id  %>
+	<%= f.text_field :company_id %><br /><br />
+	
+	<%= f.label :Address_Id   %>
+	<%= f.text_field :address_id %><br /><br />
+	
+	<%= f.submit 'Update Company_Address' %>
+<% end %>

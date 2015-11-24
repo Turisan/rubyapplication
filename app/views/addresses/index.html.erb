@@ -1,0 +1,16 @@
+<%= link_to 'Add Address', new_address_path %>
+
+<% @addresses.each do |d| %>
+<p> 
+	Company_id : <%=  link_to d.company_id, address_path(d) %><br />
+	Street1 : <%=  d.street1 %><br />
+	Street2 : <%=  d.street2 %><br />
+	City : <%=  d.city %><br />
+	State : <%=  d.state %><br />
+	Zip : <%=  d.zip %><br />
+	Country : <%=  d.country %><br />
+	Geo_tag : <%=  d.geo_tag %> | <%= link_to 'Edit', 
+		edit_address_path(d) %> | <%= link_to 'delete', address_path(d.id), method: :delete %>
+<!--		<%= link_to('Delete',{:action => 'delete',:id => d.id}) %>-->
+		
+<% end %>

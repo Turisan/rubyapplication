@@ -1,0 +1,16 @@
+<h1>Resources#edit</h1>
+<%= form_for @resource do |f| %>
+	<%= f.label	:Resource_name %> <br />
+	<%= f.text_field :resource_name %><br />
+	
+	<%= f.label :Rsource_type %><br /><br />
+	<%= f.text_field :resource_type %><br />
+	
+	<%= f.label :Description %><br /><br />
+	<%= f.text_field :description %><br />
+	
+	<%= f.label :User_Id %><br /><br />
+	<%= f.text_field :user_id %><br />
+	
+	<%= f.submit 'Update Resource' %>
+<% end %>

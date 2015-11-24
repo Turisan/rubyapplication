@@ -1,0 +1,17 @@
+<%= link_to 'Add Drink', new_drink_path %>
+<% @drinks.each do |d| %>
+<p>
+<%-#	Name: <%= link_to d.name, drink_path(d) %><br /> -%>
+	Name: <%= d.name %><br />
+	Size: <%= d.size %> 
+<% if false %>
+	| <%= link_to 'edit', 
+		edit_drink_path(d) %> 
+		| 
+		<%= link_to 'delete', 
+		d, method:delete %>
+<% end %>
+</p>
+<% end %>
+#<h1>Drink#index</h1>
+#<p>Find me in app/views/drink/index.html.erb</p>

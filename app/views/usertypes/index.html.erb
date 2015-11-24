@@ -1,0 +1,14 @@
+<h1>Usertypes#index</h1>
+
+<%= link_to 'Add User_type', new_usertype_path %>
+
+<% @usertypes.each do |d| %>
+<p> 
+	Admin_user: <%=  d.admin_user %><br />
+	Company_user: <%=  d.company_user %><br />
+	Basic_user : <%=  d.basic_user %><br />
+	Login_ability_id: <%=  d. ability_id %> | 
+		<%= link_to 'Edit', edit_usertype_path(d) %> | 
+		<%= link_to 'delete', usertype_path(d.id), method: :delete %>
+		
+<% end %>

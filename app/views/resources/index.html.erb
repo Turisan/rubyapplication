@@ -1,0 +1,13 @@
+<h1>Resources#index</h1>
+<%= link_to 'Add Resource', new_resource_path %>
+
+<% @resources.each do |d| %>
+<p> 
+	Resource_name: <%=  d.resource_name %><br />
+	Resource_Type: <%=  d.resource_type %><br />
+	Description: <%=  d.description %> <br />
+	User_Id: <%=  d.user_id %> | 
+		<%= link_to 'Edit', edit_resource_path(d) %> | 
+		<%= link_to 'delete', d, method: :delete %>
+		
+<% end %>

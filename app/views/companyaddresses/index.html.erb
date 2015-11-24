@@ -1,0 +1,10 @@
+<%= link_to 'Add Company_Address', new_companyaddress_path %>
+
+<% @companyaddresses.each do |d| %>
+<p> 
+	Company_Id: <%=  d.company_id %><br />
+	Address_id: <%=  d.address_id %> | 
+		<%= link_to 'Edit', edit_companyaddress_path(d) %> | 
+		<%= link_to 'delete', d, method: :delete %>
+		
+<% end %>

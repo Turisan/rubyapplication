@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lifeline</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		
+		<%= csrf_meta_tags %>
+		
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		
+		<script>
+			$(function() {
+			$( "#accordion" ).accordion();
+			});
+		</script>
+		</head>
+	
+	<body> 
+		<!--***********************************************************************************************-->
+		<!--******************               Header section            ************************************-->
+		<!--***********************************************************************************************-->
+		
+		<div id="search">
+			<%= image_tag('anchor2.png', :class => 'anchor') %>
+			<form method="get" action="https://www.google.com/search">
+				<input type="text" style="position: absolute; left: 70%" name="q" size="31" placeholder="Search">
+			</form>
+
+			<hr>    <!**** this to draw the the dotted line for the header ****-->
+
+		</div>
+		
+		<!--***********************************************************************************************-->
+		<!--**********       right hand column of the webpage, links to resources          ****************-->
+		<!--***********************************************************************************************-->
+
+		
+		<div id="accordion" class="accordion">
+			<h3>Search Types</h3>
+			<div>
+				<% @resources.each do |d| %>
+					<p> 
+						<%=  d.resource_type %>
+					</p>
+				<% end %>
+			</div>
+			
+			<h3>Create Listing</h3>
+			<div>
+				<!-- Sign_up or Sign_in? -->
+				<!-- if sign-up
+						goto create company-users
+						goto create company-users
+						Break off
+					if sign_in
+						login to user table
+							if 
+						goto
+				<!-- ruby checkboxes -->
+			</div>
+			
+			<h3>My Listings</h3>
+			<div>
+				<!-- ruby checkboxes -->
+			</div>
+			
+			<h3>Add Comments</h3>
+			<div>
+				<p> testing</p>
+				<%= link_to 'Add User', new_user_path %>
+				<% @users.each do |d| %>
+					<p> 
+						User_name: <%=  d.user_name %><br />
+						User_password: <%=  d.user_password %><br />
+						UserType_Id: <%=  d.userType_id %> | 
+						<%= link_to 'Edit', edit_user_path(d) %> | 
+						<%= link_to 'delete', user_path(d.id), method: :delete %>
+					</p>
+		
+				<% end %>
+			</div>
+		</div>
+		
+		<!--***********************************************************************************************-->
+		<!-- *************   The middle section of the webpage(MAP API)        ***************************-->
+		<!--***********************************************************************************************-->
+	
+		<div class="container">
+			<div id="map">
+				<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+				</script>
+				<div style="overflow:hidden;height:100%;width:100%;">
+						<div id="gmap_canvas" style="height:100%;width:100%;">
+						</div>
+	
+						<style>
+							#gmap_canvas img{max-width:none!important;background:none!important}
+						</style>
+	
+				</div>
+	
+				<script type="text/javascript"> function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(36.836262, -119.701371),mapTypeId: google.maps.MapTypeId.ROADMAP};
+					map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(36.836262, -119.701371)});
+					infowindow = new google.maps.InfoWindow({content:"<b>ITT Technical Institute</b><br/><i>Education</i><br/>362 N. Clovis Ave <br/>Clovis, CA 93612 " });
+					google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+					infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+				</script>
+			</div>
+			
+			<!--***********************************************************************************************-->
+			<!-- *************           right-hand sidebar of the webpage          ***************************-->
+			<!--***********************************************************************************************-->
+
+			<div id="sidebar">
+
+				<div id="title">
+				<b>Insert Script Here</b>
+				</div>
+				<br/>
+				<div id="content">	
+					<i>This is where either an explanation of what the item is, or where a <b>COMMENT</b> will be posted to allow users to read about the item they selected</i>
+				</div>
+		
+			</div>
+		</div>
+
+		<div id="footer">
+			<i>Image hosting provided by Flickr.  Map API courtesy of Google.</i>
+		</div>
+
+</body>
+</html>

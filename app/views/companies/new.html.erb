@@ -1,0 +1,14 @@
+<h1>Companies#new</h1>
+
+<%= form_for @company do |f| %>
+	<%= f.label	:Company_name %> <br />
+	<%= f.text_field :company_name %><br />
+	
+	<%= f.label :Company_hours %><br /><br />
+	<%= f.text_field :company_hours %><br />
+	
+	<%= f.label :Resource_Id %><br /><br />
+	<%= f.text_field :resource_id %><br />
+	
+	<%= f.submit 'Create Company' %>
+<% end %>

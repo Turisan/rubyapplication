@@ -1,0 +1,17 @@
+<h1>Usertypes#new</h1>
+
+<%= form_for @usertype do |f| %>
+	<%= f.label	:Admin_user %> <br />
+	<%= f.text_field :admin_user %><br />
+	
+	<%= f.label :Company_user %><br /><br />
+	<%= f.text_field :company_user %><br />
+	
+	<%= f.label :Basic_user %><br /><br />
+	<%= f.text_field :basic_user %><br />
+	
+	<%= f.label :Login_ability_ID %><br /><br />
+	<%= f.text_field :ability_id %><br />
+	
+	<%= f.submit 'Create UserType' %>
+<% end %>

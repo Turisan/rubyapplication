@@ -1,0 +1,23 @@
+<h1>Loginabilities#new</h1>
+
+<%= form_for @login do |f| %>
+	<%= f.label	:Login %> <br />
+	<%= f.text_field :login %><br />
+	
+	<%= f.label :Password %><br /><br />
+	<%= f.text_field :password %><br />
+	
+	<%= f.label :Read_access %><br /><br />
+	<%= f.text_field :readaccess %><br />
+	
+	<%= f.label :Create_access %><br /><br />
+	<%= f.text_field :createaccess %><br />
+	
+	<%= f.label :Edit_access %><br /><br />
+	<%= f.text_field :editaccess %><br />
+	
+	<%= f.label :Delete_access %><br /><br />
+	<%= f.text_field :deleteaccess %><br />
+	
+	<%= f.submit 'Create Login Ability' %>
+<% end %>

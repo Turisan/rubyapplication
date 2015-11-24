@@ -1,0 +1,13 @@
+<h1>Companies#index</h1>
+
+<%= link_to 'Add Company', new_company_path %>
+
+<% @companies.each do |d| %>
+<p> 
+	Company_name: <%=  d.company_name %><br />
+	Company_hours: <%=  d.company_hours %><br />
+	Resource_Id: <%=  d.resource_id %> | 
+		<%= link_to 'Edit', edit_company_path(d) %> | 
+		<%= link_to 'delete', d, method: :delete %>
+		
+<% end %>

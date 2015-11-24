@@ -1,0 +1,27 @@
+<%= form_for @address do |f| %>
+	<%= f.label	:company_id %> <br />
+	<%= f.text_field :company_id %><br />
+	
+	<%= f.label :street1 %><br /><br />
+	<%= f.text_field :street1 %><br />
+	
+	<%= f.label :street2 %><br /><br />
+	<%= f.text_field :street2 %><br />
+	
+	<%= f.label :city %><br /><br />
+	<%= f.text_field :city %><br />
+	
+	<%= f.label :state %><br /><br />
+	<%= f.text_field :state %><br />
+	
+	<%= f.label :zip %><br /><br />
+	<%= f.text_field :zip %><br />
+	
+	<%= f.label :country %><br /><br />
+	<%= f.text_field :country %><br />
+	
+	<%= f.label :geo_tag %><br /><br />
+	<%= f.text_field :geo_tag %><br />
+	
+	<%= f.submit 'Update Address' %>
+<% end %>

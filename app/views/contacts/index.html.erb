@@ -1,0 +1,16 @@
+<h1>Contacts#index</h1>
+
+<%= link_to 'Add Contact', new_contact_path %>
+
+<% @contacts.each do |d| %>
+<p> 
+	Phone: <%=  d.phone %><br />
+	Phone_Type: <%=  d.phone_type %><br />
+	Website: <%=  d.website %><br />
+	Email: <%=  d.email %><br /> 
+	Contact Name: <%=  d.contact_name %><br />
+	Company_Id: <%=  d.company_id %> | 
+		<%= link_to 'Edit', edit_contact_path(d) %> | 
+		<%= link_to 'delete', d, method: :delete %>
+		
+<% end %>

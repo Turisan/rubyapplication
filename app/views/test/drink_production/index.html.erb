@@ -1,0 +1,10 @@
+
+<% @drinks.each do |d| %>
+<p> 
+	Name: <%= d.name %><br />
+	Size: <%= d.size %> | <%= link_to 'Edit', 
+		edit_drink_path(d) %>
+</p>
+<% end %>
+
+
